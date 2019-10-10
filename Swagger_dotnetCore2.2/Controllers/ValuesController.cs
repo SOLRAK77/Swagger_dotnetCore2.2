@@ -10,13 +10,30 @@ namespace Swagger_dotnetCore2._2.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
+
+        /// <summary>
+        /// Get all values
+        /// </summary>
+        /// <remarks>
+        /// Here is a sample remarks placeholder.
+        /// </remarks>
+        /// <returns>A list of string</returns>
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
+        /// <summary>
+        /// Retrieve the value by their Id 
+        /// </summary>
+        /// <remarks>
+        /// Here is a sample remarks placeholder.
+        /// </remarks>
+        /// <param name="id">
+        /// The Id of the desired Value
+        /// </param>
+        /// <returns>A string</returns>
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
